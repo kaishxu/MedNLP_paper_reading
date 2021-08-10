@@ -45,7 +45,7 @@
 
 **[Extracting Appointment Spans from Medical Conversations](https://aclanthology.org/2021.nlpmc-1.6/)** (NLPMC 2021 workshop)
 
-
+文章构建了一个弱监督的序列标注数据集，目的是从医疗对话文本中抽取appointment原因和时间。**(没什么实质内容，无代码)**
 
 ## Summarization
 
