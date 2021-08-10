@@ -39,6 +39,14 @@
 
 文章构建了一个window-to-information标注的医疗对话数据集，具体为某个sliding window内的对话内容与数个entity（包含状态，例如检测阳性：pos）相对应，不涉及entity内具体token的标注。文章设计了一个匹配模型以计算某个dialogue片段与任意entity的得分，其中dialogue和entity的encoder均为Bi-LSTM，两者用attention进行交互以获取融合后的表示，并通过sigmoid得到最终匹配分。**（亮点在于用ranking方法解决entity抽取，非常有趣，不过用的backbone很复古，[代码](https://github.com/nlpir2020/MIE-ACL-2020)）**
 
+**[Graph-Evolving Meta-Learning for Low-Resource Medical Dialogue Generation](https://arxiv.org/abs/2012.11988)** (AAAI 2021)
+
+
+
+**[Extracting Appointment Spans from Medical Conversations](https://aclanthology.org/2021.nlpmc-1.6/)** (NLPMC 2021 workshop)
+
+
+
 ## Summarization
 
 [**Attend to Medical Ontologies: Content Selection for Clinical Abstractive Summarization**](https://arxiv.org/abs/2005.00163) (ACL 2020)
@@ -60,6 +68,10 @@
 **[Counterfactual Supporting Facts Extraction for Explainable Medical Record Based Diagnosis with Graph Network](https://aclanthology.org/2021.naacl-main.156/)** (NAACL 2021)
 
 没看懂，正二刷。**（无[代码](https://github.com/CKRE/CMGE)）**
+
+**[Rationalizing Medical Relation Prediction from Corpus-level Statistics](https://arxiv.org/abs/2005.00889)** (ACL 2020)
+
+
 
 ## Be still updating...
 
