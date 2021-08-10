@@ -13,7 +13,7 @@
 
 **[Infusing Disease Knowledge into BERT for Health Question Answering, Medical Inference and Disease Name Recognition](https://arxiv.org/abs/2010.03746)** (EMNLP 2020)
 
-为了融合knowledge到已有的pretrain model中，文章设计了一个弱监督的训练方法（原文用weakl-supervised，类似于Prompt机制）并构建了基于Wikipedia的entity-passage对数据。其方法核心是在医学文本的前部插入辅助问句（e.g.，“What is the [Aspect] of [Disease]?”），在训练阶段将aspect和disease名称mask掉构建相应的分类任务，比较tricky的是loss不仅用了常规cross entropy，还补充了未经softmax下的相应输出的监督。实验结果非常好，该融合思路在大部分BERT系列模型上都取得了提升。**（重点是设计了Prompt策略，简单且有效，[代码](https://github.com/heyunh2015/diseaseBERT)）**
+为了融合knowledge到已有的pretrain model中，文章设计了一个弱监督的训练方法（原文用weakly-supervised，类似于Prompt机制）并构建了基于Wikipedia的entity-passage对数据。其方法核心是在医学文本的前部插入辅助问句（e.g.，“What is the [Aspect] of [Disease]?”），在训练阶段将aspect和disease名称mask掉构建相应的分类任务，比较tricky的是loss不仅用了常规cross entropy，还补充了未经softmax下的相应输出的监督。实验结果非常好，该融合思路在大部分BERT系列模型上都取得了提升。**（重点是设计了Prompt策略，简单且有效，[代码](https://github.com/heyunh2015/diseaseBERT)）**
 
 ## Dataset
 
@@ -43,7 +43,7 @@
 
 [**Attend to Medical Ontologies: Content Selection for Clinical Abstractive Summarization**](https://arxiv.org/abs/2005.00163) (ACL 2020)
 
-为了更精确识别医学实体（文中用ontology term指代），文章构建了一个bi-LSTM+BERT的content selector对输入文本中的ontology term进行0/1标注（表示term是否被复制到输出文本中）。模型包括原始输入文本和ontology term两个LSTM-based encoder，用ontology的最终state增强每个原始输入文本的state。另外decoder没说清楚。**（整体思路常规，无代码）**
+为了更精确识别医学实体（文中用ontology term指代），文章构建了一个Bi-LSTM+BERT的content selector对输入文本中的ontology term进行0/1标注（表示term是否被复制到输出文本中）。模型包括原始输入文本和ontology term两个LSTM-based encoder，用ontology的最终state增强每个原始输入文本的state。另外decoder没说清楚。**（整体思路常规，无代码）**
 
 ## Reading Comprehension
 
@@ -53,7 +53,7 @@
 
 **[Towards Medical Machine Reading Comprehension with Structural Knowledge and Plain Text](https://aclanthology.org/2020.emnlp-main.111/)** (EMNLP 2020)
 
-
+文章根据中国国家执业药师资格考试设计了一个问答数据集，形式为五选一的选择题。为有效融合医学知识到已有模型，文章主要采取了三种措施：1. 构建**intermediate-task**预训练，将CMeKG中的（h，r，t）三元组以“[CLS] [h] [SEP] [t]”的形式组成输入，并构建基于BERT的分类器区分不同的r；2. 将（h，r，t）转化成“The [h] of [r] is [t]”的形式，并与question中的entity计算word mover距离，筛选TOP-K的（h，r，t）三元组；3. 用GCN强化**操作2**中的entity表示（如果我没理解错，事实上原文中并没有详细描述该操作的实现）。另外，模型在输入阶段通过IR的方式获取了TOP-N的evidence进行输入增强。实验结果上显示，**操作1**的分类器和**操作3**的GCN强化效果最不显著。**（重点是IR的引入，在多个步骤中用ranking的方式获取更多信息从而增强输入，最后的GCN像是凑数的，没什么用，无代码，[demo](http://112.74.48.115:8157/)）**
 
 ## Others
 
