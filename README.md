@@ -61,7 +61,7 @@
 
 **[Towards Medical Machine Reading Comprehension with Structural Knowledge and Plain Text](https://aclanthology.org/2020.emnlp-main.111/)** (EMNLP 2020)
 
-文章根据中国国家执业药师资格考试设计了一个问答数据集，形式为五选一的选择题。为有效融合医学知识到已有模型，文章主要采取了三种措施：1. 构建**intermediate-task**预训练，将CMeKG中的（h，r，t）三元组以“[CLS] [h] [SEP] [t]”的形式组成输入，并构建基于BERT的分类器区分不同的r；2. 将（h，r，t）转化成“The [h] of [r] is [t]”的形式，并与question中的entity计算word mover距离，筛选TOP-K的（h，r，t）三元组；3. 用GCN强化**操作2**中的entity表示（如果我没理解错，事实上原文中并没有详细描述该操作的实现）。另外，模型在输入阶段通过IR的方式获取了TOP-N的evidence进行输入增强。实验结果上显示，**操作1**的分类器和**操作3**的GCN强化效果最不显著。**（重点是IR的引入，在多个步骤中用ranking的方式获取更多信息从而增强输入，最后的GCN像是凑数的，没什么用，无代码，[demo](http://112.74.48.115:8157/)）**
+文章根据中国国家执业药师资格考试设计了一个问答数据集，形式为五选一的选择题。为有效融合医学知识到已有模型，文章主要采取了三种思路：1. 构建**intermediate-task**预训练，将CMeKG中的（h，r，t）三元组以“[CLS] [h] [SEP] [t]”的形式组成输入，并构建基于BERT的分类器区分不同的r；2. 将（h，r，t）转化成“The [h] of [r] is [t]”的形式，并与question中的entity计算word mover距离，筛选TOP-K的（h，r，t）三元组；3. 用GCN强化**思路2**中的entity表示（如果我没理解错，事实上原文中并没有详细描述该操作的实现）。另外，模型在输入阶段通过IR的方式获取了TOP-N的evidence进行输入增强。实验结果上显示，**思路1**的分类器和**思路3**的GCN强化效果最不显著。**（重点是IR的引入，在多个步骤中用ranking的方式获取更多信息从而增强输入，最后的GCN像是凑数的，没什么用，无代码，[demo](http://112.74.48.115:8157/)）**
 
 ## Others
 
