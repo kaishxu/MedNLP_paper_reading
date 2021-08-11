@@ -41,7 +41,7 @@
 
 **[Graph-Evolving Meta-Learning for Low-Resource Medical Dialogue Generation](https://arxiv.org/abs/2012.11988)** (AAAI 2021)
 
-
+文章主要提出了一个基于meta-learning的训练框架用于解决医疗场景下的low-resource问题，其中Graph-Evolving指将对话中的两个共现entity进行连接以弥补已有Commonsense Graph在医疗领域的不足。具体实现上，模型用了hierarchical的encoder分别编码句子和整段对话，句子编码单独构成graph并和entity graph进行融合，entity graph用GAT方式学习，而对话编码则用于decoder的初始化。最终decoder涉及词表和entity graph的条件概率。**（用meta-learning解决long-tail或者low-resource是个很有意思的点；graph-evole很tricky，如果只是共现，且和embedding无关，其实都不需要evolve，直接在最开始根据所有dialogue把图补全就好了，目前不知道作者具体怎么实现的；文章撰写极其糟糕，句子编码的graph如何融合到entity graph中完全没有说明，decoder输入以及输出的概率完全没有说明，[代码](https://github.com/ha-lins/GEML-MDG)）**
 
 **[Extracting Appointment Spans from Medical Conversations](https://aclanthology.org/2021.nlpmc-1.6/)** (NLPMC 2021 workshop)
 
