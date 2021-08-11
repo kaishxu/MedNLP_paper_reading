@@ -55,7 +55,7 @@
 
 [**A Gradually Soft Multi-Task and Data-Augmented Approach to Medical Question Understanding**](https://aclanthology.org/2021.acl-long.119/) (ACL 2021)
 
-文章提出了一个gradually soft的多任务学习框架，该框架固定不同任务的encoder参数hard sharing（完全共享），而decoder参数gradually soft sharing（即模型层面上不共享，但通过loss约束每层的参数相似性，该文章期望层数越大，参数差异越大）。关于data augmentation，作者首先说明了summarization任务和recognizing question entailment（问题蕴含识别）任务的一致性，然后通过将S任务改写成R任务，将R任务改写成S任务，从而构建领域一致的数据集。实验结果显示这两个改进都能带来一定程度提升。**（亮点在于gradually soft，而data augmentation属于锦上添花，并且方法通用性很强，并没有依赖medical相关知识，但是这文章写的实在是恶心，尤其数据增强部分，明明就很简单却要描述的那么绕，无[代码](https://github.com/KhalilMrini/Medical-Question-Understanding)）**
+文章提出了一个gradually soft的多任务学习框架，该框架固定不同任务的encoder参数hard sharing（完全共享），而decoder参数gradually soft sharing（即模型层面上不共享，但通过loss约束每层的参数相似性，该文章期望层数越大，参数差异越大）。关于data augmentation，作者首先说明了summarization任务和recognizing question entailment（问题蕴含识别）任务的一致性，然后通过将S任务的数据改写成R任务的数据，将R任务的数据改写成S任务的数据，从而丰富各自任务的数据，构建领域一致的数据集。实验结果显示这两个改进都能带来一定程度提升。**（亮点在于gradually soft，而data augmentation属于锦上添花，并且方法通用性很强，并没有依赖medical相关知识，但是这文章写的实在是恶心，尤其数据增强部分，明明就很简单却要描述的那么绕，无[代码](https://github.com/KhalilMrini/Medical-Question-Understanding)）**
 
 ## Reading Comprehension
 
