@@ -15,6 +15,10 @@
 
 为了融合knowledge到已有的pretrain model中，文章设计了一个弱监督的训练方法（原文用weakly-supervised，类似于Prompt机制）并构建了基于Wikipedia的entity-passage对数据。其方法核心是在医学文本的前部插入辅助问句（e.g.，“What is the [Aspect] of [Disease]?”），在训练阶段将aspect和disease名称mask掉构建相应的分类任务，比较tricky的是loss不仅用了常规cross entropy，还补充了未经softmax下的相应输出的监督。实验结果非常好，该融合思路在大部分BERT系列模型上都取得了提升。**（重点是设计了Prompt策略，简单且有效，[代码](https://github.com/heyunh2015/diseaseBERT)）**
 
+**[SMedBERT: A Knowledge-Enhanced Pre-trained Language Model with Structured Semantics for Medical Text Mining](https://aclanthology.org/2021.acl-long.457/)** (ACL 2021)
+
+
+
 ## Dataset
 
 **[emrKBQA: A Clinical Knowledge-Base Question Answering Dataset](https://aclanthology.org/2021.bionlp-1.7/)** (BioNLP 2021 workshop)
@@ -28,6 +32,10 @@
 **[MedDG: A Large-scale Medical Consultation Dataset for Building Medical Dialogue System](https://arxiv.org/abs/2010.07497)**
 
 医疗对话数据集，仅包含中文，共1.7万条对话。其中每条对话都有实体标注，涉及诱因、疾病、症状、检测和药物5种类型共160个实体标注。**（[代码](https://github.com/lwgkzl/MedDG)）**
+
+**[On the Generation of Medical Dialogues for COVID-19](https://arxiv.org/abs/2005.05442)** (ACL 2021)
+
+关于COVID-19的医疗对话数据集，包括中英文，中文1万条对话，英文1千条对话。**（[代码](https://github.com/UCSD-AI4H/COVID-Dialogue)）**
 
 ## Dialogue
 
