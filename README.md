@@ -79,7 +79,7 @@
 
 **[A Neural Transition-based Joint Model for Disease Named Entity Recognition and Normalization](https://aclanthology.org/2021.acl-long.219/)** (ACL 2021)
 
-
+文章提出了一个神经网络构建的基于状态转移的NER及entity normalization模型，目的在于模拟一种用于NER的状态转移算法（无需token标记）。文章将状态分为recognition（OUT，SHIFT，REDUCE，SEGMENT-t）和normalization（LINKING-c）两大类，并用不同模型进行表示，最终用softmax获取各状态的最大概率。**（虽然文章强调的贡献是end-to-end地解决NER和normalization两个任务，但用神经网络模拟状态转移比较有意思。文章有些地方说的不太清楚，e.g.，在norm中涉及多个且数量不一致的concept，最后如何计算softmax，在segment的时候需要输出entity类型，原文没有说明，无代码）**
 
 ## Others
 
