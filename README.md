@@ -89,7 +89,7 @@
 
 **[Rationalizing Medical Relation Prediction from Corpus-level Statistics](https://arxiv.org/abs/2005.00889)** (ACL 2020)
 
-
+**（[代码](https://github.com/zhenwang9102/X-MedRELA)）**
 
 ## Be still updating...
 
