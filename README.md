@@ -93,7 +93,7 @@
 
 **[Rationalizing Medical Relation Prediction from Corpus-level Statistics](https://arxiv.org/abs/2005.00889)** (ACL 2020)
 
-**（[代码](https://github.com/zhenwang9102/X-MedRELA)）**
+文章参照人类记忆的认知过程，构建了Recall、Recognition和Pred三模块的医学关系预测模型。Recall模块学习语料中的entity共现，Recognition模块对给定的head和tail及其相关entity pair（e.g.，i和j），首先学习i和j潜在relation的加权表示，再汇总得到节点和关系的综合表示eij，Pred模块将通过不同相关entity pair的表示进行融合得到最终表示，并通过sigmoid得到head和tail的相关性预测。**（文章亮点一方面在于利用语料库的entity共现补全原有KG的信息，另一方面在于提出了一种可解释性的关系预测框架，可提供待预测关系关联与否的相关关系依据，[代码](https://github.com/zhenwang9102/X-MedRELA)）**
 
 ## Be still updating...
 
