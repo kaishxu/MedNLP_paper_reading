@@ -17,7 +17,11 @@
 
 **[SMedBERT: A Knowledge-Enhanced Pre-trained Language Model with Structured Semantics for Medical Text Mining](https://aclanthology.org/2021.acl-long.457/)** (ACL 2021)
 
-文章构建了一个预训练模型将结构化医疗语义知识融入BERT中。细节上，主要包含Mention-neighbor Hybrid Attention和Mention-neighbor Context Modeling，其中前者为hierarchical的attention，先按节点类型attend，再按具体节点attend，最后用gate除噪，后者为预训练辅助任务，包括Masked Neighbor Modeling（目前没看懂，涉及[TransR](https://dl.acm.org/doi/10.5555/2886521.2886624)）和Masked Mention Modeling（不理解为什么做这个任务）。另外context相关entity的获取还用到了PageRank。**（整体思路很明确，但是每个细节都很复杂，需要二刷，[代码](https://github.com/MatNLP/SMedBERT)）**
+文章构建了一个预训练模型将结构化医疗语义知识融入BERT中。细节上，主要包含Mention-neighbor Hybrid Attention和Mention-neighbor Context Modeling，其中前者为hierarchical的attention，先按节点类型attend，再按具体节点attend，最后用gate除噪，后者为预训练辅助任务，包括Masked Neighbor Modeling（目前没看懂，涉及[TransR](https://dl.acm.org/doi/10.5555/2886521.2886624)）和Masked Mention Modeling（不理解为什么做这个任务）。另外context相关entity的获取还用到了PageRank。**（整体思路很明确，但是每个细节都很复杂，有些模块没什么依据，[代码](https://github.com/MatNLP/SMedBERT)）**
+
+**[Self-Alignment Pretraining for Biomedical Entity Representations](https://arxiv.org/abs/2010.11784)** (NAACL 2021)
+
+**（[代码](https://github.com/cambridgeltl/sapbert)）**
 
 ## Dataset
 
