@@ -39,7 +39,7 @@
 
 **[UmlsBERT: Clinical Domain Knowledge Augmentation of Contextual Embeddings Using the Unified Medical Language System Metathesaurus](https://arxiv.org/abs/2010.10391)** (NAACL 2021)
 
-**([代码](https://github.com/gmichalo/UmlsBERT))**
+文章构建了一个医学知识增强的预训练模型，其通过引入UMLS语义类型（e.g.，心脏的语义类型为身体部位、器官）增强原有BERT对医学知识的表示，另外修改了softmax形式的loss为二元多标签loss。**(思路很常规，实验效果一般，[代码](https://github.com/gmichalo/UmlsBERT))**
 
 ## Dialogue
 
