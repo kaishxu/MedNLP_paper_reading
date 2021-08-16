@@ -1,6 +1,24 @@
 # MedNLP paper reading
 学习记录（纯主观）。
 
+## Dataset
+
+**[emrKBQA: A Clinical Knowledge-Base Question Answering Dataset](https://aclanthology.org/2021.bionlp-1.7/)** (BioNLP 2021 workshop)
+
+设计有点复杂，脑子清醒再看。**（数据集未公开）**
+
+**[MedDialog: Large-scale Medical Dialogue Datasets](https://aclanthology.org/2020.emnlp-main.743/)** (EMNLP 2020)
+
+医疗对话数据集，包括中英文，中文340万条对话，英文25万条对话。数据集核心内容除多轮对话外，还包括病情描述、病人基本情况等信息。**（[代码](https://github.com/UCSD-AI4H/Medical-Dialogue-System)）**
+
+**[MedDG: A Large-scale Medical Consultation Dataset for Building Medical Dialogue System](https://arxiv.org/abs/2010.07497)**
+
+医疗对话数据集，仅包含中文，共1.7万条对话。其中每条对话都有实体标注，涉及诱因、疾病、症状、检测和药物5种类型共160个实体标注。**（[代码](https://github.com/lwgkzl/MedDG)）**
+
+**[On the Generation of Medical Dialogues for COVID-19](https://arxiv.org/abs/2005.05442)** (ACL 2021)
+
+关于COVID-19的医疗对话数据集，包括中英文，中文1万条对话，英文1千条对话。**（[代码](https://github.com/UCSD-AI4H/COVID-Dialogue)）**
+
 ## Pretraining
 
 [**Conceptualized Representation Learning for Chinese Biomedical Text Mining**](https://arxiv.org/abs/2008.10813) (WSDM 2020 Health Day)
@@ -22,24 +40,6 @@
 **[Self-Alignment Pretraining for Biomedical Entity Representations](https://arxiv.org/abs/2010.11784)** (NAACL 2021)
 
 **（[代码](https://github.com/cambridgeltl/sapbert)）**
-
-## Dataset
-
-**[emrKBQA: A Clinical Knowledge-Base Question Answering Dataset](https://aclanthology.org/2021.bionlp-1.7/)** (BioNLP 2021 workshop)
-
-设计有点复杂，脑子清醒再看。**（数据集未公开）**
-
-**[MedDialog: Large-scale Medical Dialogue Datasets](https://aclanthology.org/2020.emnlp-main.743/)** (EMNLP 2020)
-
-医疗对话数据集，包括中英文，中文340万条对话，英文25万条对话。数据集核心内容除多轮对话外，还包括病情描述、病人基本情况等信息。**（[代码](https://github.com/UCSD-AI4H/Medical-Dialogue-System)）**
-
-**[MedDG: A Large-scale Medical Consultation Dataset for Building Medical Dialogue System](https://arxiv.org/abs/2010.07497)**
-
-医疗对话数据集，仅包含中文，共1.7万条对话。其中每条对话都有实体标注，涉及诱因、疾病、症状、检测和药物5种类型共160个实体标注。**（[代码](https://github.com/lwgkzl/MedDG)）**
-
-**[On the Generation of Medical Dialogues for COVID-19](https://arxiv.org/abs/2005.05442)** (ACL 2021)
-
-关于COVID-19的医疗对话数据集，包括中英文，中文1万条对话，英文1千条对话。**（[代码](https://github.com/UCSD-AI4H/COVID-Dialogue)）**
 
 ## Dialogue
 
