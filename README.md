@@ -83,7 +83,7 @@
 
 **[An End-to-End Progressive Multi-Task Learning Framework for Medical Named Entity Recognition and Normalization](https://aclanthology.org/2021.acl-long.485/)** (ACL 2021)
 
-**([代码](https://github.com/zhoubaohang/E2EMERN))**
+文章提出了一个渐进式的多任务学习框架，该框架将NER和NEN任务分为low-level、mid-level和high-level子任务，分别为基于pretrain model的token序列标注、KG融合（用pretrain model生成entity表示）的粗粒度mention蕴含和KG融合的细粒度mention token序列标注。**(整体思路比较简单顺滑，[代码](https://github.com/zhoubaohang/E2EMERN))**
 
 ## Others
 
