@@ -37,10 +37,6 @@
 
 文章构建了一个预训练模型将结构化医疗语义知识融入BERT中。细节上，主要包含Mention-neighbor Hybrid Attention和Mention-neighbor Context Modeling，其中前者为hierarchical的attention，先按节点类型attend，再按具体节点attend，最后用gate除噪，后者为预训练辅助任务，包括Masked Neighbor Modeling（目前没看懂，涉及[TransR](https://dl.acm.org/doi/10.5555/2886521.2886624)）和Masked Mention Modeling（不理解为什么做这个任务）。另外context相关entity的获取还用到了PageRank。**（整体思路很明确，但是每个细节都很复杂，有些模块没什么依据，[代码](https://github.com/MatNLP/SMedBERT)）**
 
-**[Self-Alignment Pretraining for Biomedical Entity Representations](https://arxiv.org/abs/2010.11784)** (NAACL 2021)
-
-**（[代码](https://github.com/cambridgeltl/sapbert)）**
-
 ## Dialogue
 
 **[End-to-End Knowledge-Routed Relational Dialogue System for Automatic Diagnosis](https://arxiv.org/abs/1901.10623)** (AAAI 2019)
@@ -102,6 +98,10 @@
 **[Zero-shot Medical Entity Retrieval without Annotation: Learning From Rich Knowledge Graph Semantics](https://arxiv.org/abs/2105.12682)** (ACL 2021 short)
 
 文章提出了一个基于medical KG的zero-shot实体提取框架。核心思路是利用KG中涉及的相同实体的同义表达，以及实体间的图形结构，构建双塔结构（Bi-encoder）的对比学习模型，从而对任意未标注的mention获取top-k相关的KG entity。文章用到了ICD-10、SNOMED和UMLS三种medical KG，ICD-10为树结构，parent和child拼接构成entity，SNOMED和UMLS为有向图，涉及多种关系。**(整体思路挺常规，和句子相似匹配、dense passage retrieval相近，无代码)**
+
+**[Self-Alignment Pretraining for Biomedical Entity Representations](https://arxiv.org/abs/2010.11784)** (NAACL 2021)
+
+文章整体思路同[Zero-shot Medical Entity Retrieval without Annotation: Learning From Rich Knowledge Graph Semantics](https://arxiv.org/abs/2105.12682)，核心是利用对比学习模型，从KG中的相同实体的同义表达中学习该实体的向量表示。其中正负例选择采用online hard pair mining，将较容易正例剔除，loss采用multi-similarity。**（整体思路和我被拒的文章相似，不过这个multi-similarity会有奇效吗？[代码](https://github.com/cambridgeltl/sapbert)）**
 
 ## Be still updating...
 
