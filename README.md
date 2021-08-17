@@ -1,5 +1,5 @@
 # MedNLP paper reading
-学习记录（纯主观）。
+学习记录。
 
 ## Dataset
 
