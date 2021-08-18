@@ -39,7 +39,7 @@
 
 **[UmlsBERT: Clinical Domain Knowledge Augmentation of Contextual Embeddings Using the Unified Medical Language System Metathesaurus](https://arxiv.org/abs/2010.10391)** (NAACL 2021)
 
-文章构建了一个医学知识增强的预训练模型，其通过引入UMLS语义类型（e.g.，心脏的语义类型为身体部位、器官）增强原有BERT对医学知识的表示，另外修改了softmax形式的loss为二元多标签loss。**(思路很常规，实验效果一般，[代码](https://github.com/gmichalo/UmlsBERT))**
+文章构建了一个医学知识增强的预训练模型，其通过引入UMLS语义类型（e.g.，心脏的语义类型为身体部位、器官）增强原有BERT对医学知识的表示，另外修改了softmax形式的loss为二元多标签loss。**（思路很常规，实验效果一般，[代码](https://github.com/gmichalo/UmlsBERT)）**
 
 ## Dialogue
 
@@ -57,7 +57,7 @@
 
 **[Extracting Appointment Spans from Medical Conversations](https://aclanthology.org/2021.nlpmc-1.6/)** (NLPMC 2021 workshop)
 
-文章构建了一个弱监督的序列标注数据集，目的是从医疗对话文本中抽取appointment原因和时间。**(没什么实质内容，无代码)**
+文章构建了一个弱监督的序列标注数据集，目的是从医疗对话文本中抽取appointment原因和时间。**（没什么实质内容，无代码）**
 
 ## Summarization
 
@@ -73,7 +73,7 @@
 
 **[Knowledge-Empowered Representation Learning for Chinese Medical Reading Comprehension: Task, Model and Resources](https://aclanthology.org/2021.findings-acl.197.pdf)** (ACL Findings 2021)
 
-文章设计了一个CMedMRC任务以及数据集（形式同SQuAD，e.g.，**Passage**-**Question**-**Answer**-**Support sentence**），总结了medical MRC的几个难点：长尾术语（出现频率非常低的token）、书面vs口头表述差异、术语组合以及术语转述（个人认为这几个难点算medical NLP的难点，不单单只是MRC）。 文章设计了一个BERT-based的answer extraction模型，核心是KB representation（用PTransE）和BERT representation的融合，在常规方法（把KB信息attend到BERT output上）上叠加一个过滤器（Gated Loop Layer），该过滤器以迭代的方式不断用KB信息精炼和融合当前BERT output。**(整体更像一个QA任务，比较有意思的点在于迭代精炼，但作者并没有做相关ablation实验，效果不得而知，无[代码](https://github.com/MatNLP/CMedMRC))**
+文章设计了一个CMedMRC任务以及数据集（形式同SQuAD，e.g.，**Passage**-**Question**-**Answer**-**Support sentence**），总结了medical MRC的几个难点：长尾术语（出现频率非常低的token）、书面vs口头表述差异、术语组合以及术语转述（个人认为这几个难点算medical NLP的难点，不单单只是MRC）。 文章设计了一个BERT-based的answer extraction模型，核心是KB representation（用PTransE）和BERT representation的融合，在常规方法（把KB信息attend到BERT output上）上叠加一个过滤器（Gated Loop Layer），该过滤器以迭代的方式不断用KB信息精炼和融合当前BERT output。**（整体更像一个QA任务，比较有意思的点在于迭代精炼，但作者并没有做相关ablation实验，效果不得而知，无[代码](https://github.com/MatNLP/CMedMRC)）**
 
 **[Towards Medical Machine Reading Comprehension with Structural Knowledge and Plain Text](https://aclanthology.org/2020.emnlp-main.111/)** (EMNLP 2020)
 
@@ -87,7 +87,7 @@
 
 **[An End-to-End Progressive Multi-Task Learning Framework for Medical Named Entity Recognition and Normalization](https://aclanthology.org/2021.acl-long.485/)** (ACL 2021)
 
-文章提出了一个渐进式的多任务学习框架，该框架将NER和NEN任务分为low-level、mid-level和high-level子任务，分别为基于pretrain model的token序列标注、KG融合（用pretrain model生成entity表示）的粗粒度mention蕴含和KG融合的细粒度mention token序列标注。**(整体思路比较简单顺滑，[代码](https://github.com/zhoubaohang/E2EMERN))**
+文章提出了一个渐进式的多任务学习框架，该框架将NER和NEN任务分为low-level、mid-level和high-level子任务，分别为基于pretrain model的token序列标注、KG融合（用pretrain model生成entity表示）的粗粒度mention蕴含和KG融合的细粒度mention token序列标注。**（整体思路比较简单顺滑，[代码](https://github.com/zhoubaohang/E2EMERN)）**
 
 ## Others
 
@@ -101,7 +101,7 @@
 
 **[Zero-shot Medical Entity Retrieval without Annotation: Learning From Rich Knowledge Graph Semantics](https://arxiv.org/abs/2105.12682)** (ACL 2021 short)
 
-文章提出了一个基于medical KG的zero-shot实体提取框架。核心思路是利用KG中涉及的相同实体的同义表达，以及实体间的图形结构，构建双塔结构（Bi-encoder）的对比学习模型，从而对任意未标注的mention获取top-k相关的KG entity。文章用到了ICD-10、SNOMED和UMLS三种medical KG，ICD-10为树结构，parent和child拼接构成entity，SNOMED和UMLS为有向图，涉及多种关系。**(整体思路挺常规，和句子相似匹配、dense passage retrieval相近，无代码)**
+文章提出了一个基于medical KG的zero-shot实体提取框架。核心思路是利用KG中涉及的相同实体的同义表达，以及实体间的图形结构，构建双塔结构（Bi-encoder）的对比学习模型，从而对任意未标注的mention获取top-k相关的KG entity。文章用到了ICD-10、SNOMED和UMLS三种medical KG，ICD-10为树结构，parent和child拼接构成entity，SNOMED和UMLS为有向图，涉及多种关系。**（整体思路挺常规，和句子相似匹配、dense passage retrieval相近，无代码）**
 
 **[Self-Alignment Pretraining for Biomedical Entity Representations](https://arxiv.org/abs/2010.11784)** (NAACL 2021)
 
@@ -109,7 +109,11 @@
 
 [**Clustering-based Inference for Biomedical Entity Linking**](https://aclanthology.org/2021.naacl-main.205/) (NAACL 2021)
 
-**(无代码)**
+**（无代码）**
+
+**[FedED: Federated Learning via Ensemble Distillation for Medical Relation Extraction](https://aclanthology.org/2020.emnlp-main.165/)** (EMNLP 2020)
+
+**（无代码）**
 
 ## Be still updating...
 
