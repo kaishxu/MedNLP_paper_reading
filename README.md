@@ -5,7 +5,7 @@
 
 **[emrKBQA: A Clinical Knowledge-Base Question Answering Dataset](https://aclanthology.org/2021.bionlp-1.7/)** (BioNLP 2021 workshop)
 
-设计有点复杂，脑子清醒再看。**（数据集未公开）**
+设计有点复杂，脑子清醒再看。**（无代码）**
 
 **[MedDialog: Large-scale Medical Dialogue Datasets](https://aclanthology.org/2020.emnlp-main.743/)** (EMNLP 2020)
 
@@ -18,6 +18,10 @@
 **[On the Generation of Medical Dialogues for COVID-19](https://arxiv.org/abs/2005.05442)** (ACL 2021)
 
 关于COVID-19的医疗对话数据集，包括中英文，中文1万条对话，英文1千条对话。**（[代码](https://github.com/UCSD-AI4H/COVID-Dialogue)）**
+
+**[COMETA: A Corpus for Medical Entity Linking in the Social Media](https://aclanthology.org/2020.emnlp-main.253/)** (EMNLP 2020)
+
+**（[代码](https://github.com/cambridgeltl/cometa)）**
 
 ## Pretraining
 
@@ -109,7 +113,7 @@
 
 [**Clustering-based Inference for Biomedical Entity Linking**](https://aclanthology.org/2021.naacl-main.205/) (NAACL 2021)
 
-文章提出了一种基于clustering的entity linking推理机制。首先用两个BERT模型分别构建mention-mention和mention-entity的评价模型，之后通过single-linkage层次聚类算法将最相关的mention-mention或mention-entity进行连接，并且每个cluster只能包含一个entity。**（文章的想法挺有意思，相比于直接判断mention和entity的关系，利用mention之间的联系简介link到entity可以充分利用context的信息，不过有个明显的问题是两个BERT-based的评价模型如何一致（两者分数可能会有较大差异，无法平衡），无代码）**
+文章提出了一种基于clustering的entity linking推理机制。首先用两个BERT模型分别构建mention-mention和mention-entity的评价模型，之后通过single-linkage层次聚类算法将最相关的mention-mention或mention-entity进行连接，并且每个cluster只能包含一个entity。**（文章的想法挺有意思，相比于直接判断mention和entity的关系，利用mention之间的联系间接link到entity可以充分利用mention context的信息，不过有个明显的问题是两个BERT-based的评价模型如何一致（两者分数可能会有较大差异，无法平衡），无代码）**
 
 **[FedED: Federated Learning via Ensemble Distillation for Medical Relation Extraction](https://aclanthology.org/2020.emnlp-main.165/)** (EMNLP 2020)
 
