@@ -109,7 +109,7 @@
 
 [**Clustering-based Inference for Biomedical Entity Linking**](https://aclanthology.org/2021.naacl-main.205/) (NAACL 2021)
 
-**（无代码）**
+文章提出了一种基于clustering的entity linking推理机制。首先用两个BERT模型分别构建mention-mention和mention-entity的评价模型，之后通过single-linkage层次聚类算法将最相关的mention-mention或mention-entity进行连接，并且每个cluster只能包含一个entity。**（文章的想法挺有意思，相比于直接判断mention和entity的关系，利用mention之间的联系简介link到entity可以充分利用context的信息，不过有个明显的问题是两个BERT-based的评价模型如何一致（两者分数可能会有较大差异，无法平衡），无代码）**
 
 **[FedED: Federated Learning via Ensemble Distillation for Medical Relation Extraction](https://aclanthology.org/2020.emnlp-main.165/)** (EMNLP 2020)
 
