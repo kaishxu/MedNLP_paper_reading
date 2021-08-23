@@ -1,4 +1,4 @@
-# MedNLP paper reading
+# Medical NLP paper reading
 学习记录。
 
 ## Dataset
