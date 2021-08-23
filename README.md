@@ -67,7 +67,7 @@
 
 文章构建了一个弱监督的序列标注数据集，目的是从医疗对话文本中抽取appointment原因和时间。**（没什么实质内容，无代码）**
 
-**[Semi-Supervised Variational Reasoning for Medical Dialogue Generation](https://arxiv.org/abs/2105.06071)** (SIGIR 2021) ☆
+**[Semi-Supervised Variational Reasoning for Medical Dialogue Generation](https://arxiv.org/abs/2105.06071)** (SIGIR 2021) ★
 
 **（[代码](https://github.com/lddsdu/VRBot)）**
 
