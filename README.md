@@ -21,7 +21,7 @@
 
 **[COMETA: A Corpus for Medical Entity Linking in the Social Media](https://aclanthology.org/2020.emnlp-main.253/)** (EMNLP 2020)
 
-**（[代码](https://github.com/cambridgeltl/cometa)）**
+医疗实体链接数据集，仅包含英文，共2万条，涉及社交媒体中的生物医学mention和SNOMED CT的entity对齐。**（[代码](https://github.com/cambridgeltl/cometa)）**
 
 ## Pretraining
 
