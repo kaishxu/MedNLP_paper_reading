@@ -23,6 +23,10 @@
 
 医疗实体链接数据集，仅包含英文，共2万条，涉及社交媒体中的生物医学mention和SNOMED CT的entity对齐。**（[代码](https://github.com/cambridgeltl/cometa)）**
 
+**[Identifying Medical Self-Disclosure in Online Communities](https://aclanthology.org/2021.naacl-main.347.pdf)** (NAACL 2021)
+
+**（无代码）**
+
 ## Pretraining
 
 [**Conceptualized Representation Learning for Chinese Biomedical Text Mining**](https://arxiv.org/abs/2008.10813) (WSDM 2020 Health Day)
@@ -62,6 +66,10 @@
 **[Extracting Appointment Spans from Medical Conversations](https://aclanthology.org/2021.nlpmc-1.6/)** (NLPMC 2021 workshop)
 
 文章构建了一个弱监督的序列标注数据集，目的是从医疗对话文本中抽取appointment原因和时间。**（没什么实质内容，无代码）**
+
+**[Semi-Supervised Variational Reasoning for Medical Dialogue Generation](https://arxiv.org/abs/2105.06071)** (SIGIR 2021)
+
+**（[代码](https://github.com/lddsdu/VRBot)）**
 
 ## Summarization
 
