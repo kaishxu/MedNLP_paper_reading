@@ -127,5 +127,9 @@
 
 **（无代码）**
 
+**[Structured Fine-Tuning of Contextual Embeddings for Effective Biomedical Retrieval](https://dl.acm.org/doi/10.1145/3404835.3463075)** (SIGIR 2021 short)
+
+文章提出了一种基于structured abstract的生物信息retrieval的方法，从而利用structured abstract中内部已划分好的section（background，conclusion，etc.）增强retrieval的精确度。**（挺常规，无代码）**
+
 ## Be still updating...
 
