@@ -105,7 +105,7 @@
 
 **[Counterfactual Supporting Facts Extraction for Explainable Medical Record Based Diagnosis with Graph Network](https://aclanthology.org/2021.naacl-main.156/)** (NAACL 2021)
 
-没看懂，正二刷。**（无[代码](https://github.com/CKRE/CMGE)）**
+**（无[代码](https://github.com/CKRE/CMGE)）**
 
 **[Rationalizing Medical Relation Prediction from Corpus-level Statistics](https://arxiv.org/abs/2005.00889)** (ACL 2020) ★
 
@@ -130,6 +130,10 @@
 **[Structured Fine-Tuning of Contextual Embeddings for Effective Biomedical Retrieval](https://dl.acm.org/doi/10.1145/3404835.3463075)** (SIGIR 2021 short)
 
 文章提出了一种基于structured abstract的生物信息retrieval的方法，从而利用structured abstract中内部已划分好的section（background，conclusion，etc.）增强retrieval的精确度。**（挺常规，无代码）**
+
+**[Predicting Patient Readmission Risk from Medical Text via Knowledge Graph Enhanced Multiview Graph Convolution](https://dl.acm.org/doi/abs/10.1145/3404835.3463062)** (SIGIR 2021 short)
+
+文章提出了一个KG强化的multiview GCN模型用于病患重新入院风险预测。该任务为用病患的电子病历（EHR）预测再入院概率。其中GCN输入部分用到了4种不同的邻接矩阵，包括Intra-Document（1）、Intra-UMLS（2）和Document-UMLS（1）**（感觉任务本身有点怪，无代码）**
 
 ## Be still updating...
 
