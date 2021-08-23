@@ -73,7 +73,7 @@
 
 **[Medical Triage Chatbot Diagnosis Improvement via Multi-relational Hyperbolic Graph Neural Network](https://dl.acm.org/doi/abs/10.1145/3404835.3463095)** (SIGIR 2021 short)
 
-**（无代码）**
+没看懂，涉及Hyperbolic GCN相关知识。**（无代码）**
 
 ## Summarization
 
