@@ -25,7 +25,7 @@
 
 **[Identifying Medical Self-Disclosure in Online Communities](https://aclanthology.org/2021.naacl-main.347.pdf)** (NAACL 2021)
 
-**（无代码）**
+社交媒体中的医疗self-disclosure（自我披露）数据集，样本数量很少。**（感觉没什么用，无代码）**
 
 ## Pretraining
 
