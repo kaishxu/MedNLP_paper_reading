@@ -27,6 +27,10 @@
 
 社交媒体中的医疗self-disclosure（自我披露）数据集，样本数量很少。**（感觉没什么用，无代码）**
 
+**[MELINDA: A Multimodal Dataset for Biomedical Experiment Method Classification](https://arxiv.org/abs/2012.09216)** (AAAI 2021)
+
+文章提出了一个多模态数据集，包括figure、sub-caption associated to one or multiple sub-figure(s)和一组curated experiment method labels。
+
 ## Pretraining
 
 [**Conceptualized Representation Learning for Chinese Biomedical Text Mining**](https://arxiv.org/abs/2008.10813) (WSDM 2020 Health Day)
@@ -85,6 +89,10 @@
 
 文章提出了一个gradually soft的多任务学习框架，该框架固定不同任务的encoder参数hard sharing（完全共享），而decoder参数gradually soft sharing（即模型层面上不共享，但通过loss约束每层的参数相似性，该文章期望层数越大，参数差异越大）。关于data augmentation，作者首先说明了summarization任务和recognizing question entailment（问题蕴含识别）任务的一致性，然后通过将S任务的数据改写成R任务的数据，将R任务的数据改写成S任务的数据，从而丰富各自任务的数据，构建领域一致的数据集。实验结果显示这两个改进都能带来一定程度提升。**（亮点在于gradually soft，而data augmentation属于锦上添花，并且方法通用性很强，并没有依赖medical相关知识，但是这文章写的实在是恶心，尤其数据增强部分，明明就很简单却要描述的那么绕，无[代码](https://github.com/KhalilMrini/Medical-Question-Understanding)）**
 
+**[Summarizing Medical Conversations via Identifying Important Utterances](https://aclanthology.org/2020.coling-main.63/)** (COLING 2020)
+
+文章额外增加了一个taging任务，将对话中每个turn的作用区分为**问题描述**、**诊断治疗**和**其他**。方法上用到了memory network。**（没说明decoder细节，没说明如何训练，[代码](https://github.com/cuhksz-nlp/HET-MC)）**
+
 ## Reading Comprehension
 
 **[Knowledge-Empowered Representation Learning for Chinese Medical Reading Comprehension: Task, Model and Resources](https://aclanthology.org/2021.findings-acl.197.pdf)** (ACL Findings 2021)
@@ -105,6 +113,24 @@
 
 文章提出了一个渐进式的多任务学习框架，该框架将NER和NEN任务分为low-level、mid-level和high-level子任务，分别为基于pretrain model的token序列标注、KG融合（用pretrain model生成entity表示）的粗粒度mention蕴含和KG融合的细粒度mention token序列标注。**（整体思路比较简单顺滑，[代码](https://github.com/zhoubaohang/E2EMERN)）**
 
+**[MTAAL: Multi-Task Adversarial Active Learning for Medical Named Entity Recognition and Normalization](https://ojs.aaai.org/index.php/AAAI/article/view/17714)** (AAAI 2021)
+
+文章主要目的是解决医疗数据标注少的问题，希望用active learning，但现有active learning模型未能将**不同任务的task-specific features**和**样本多样性**考虑进来的问题。
+
+## Entity Linking
+
+[**Clustering-based Inference for Biomedical Entity Linking**](https://aclanthology.org/2021.naacl-main.205/) (NAACL 2021) ★
+
+文章提出了一种基于clustering的entity linking推理机制。首先用两个BERT模型分别构建mention-mention和mention-entity的评价模型，之后通过single-linkage层次聚类算法将最相关的mention-mention或mention-entity进行连接，并且每个cluster只能包含一个entity。**（文章的想法挺有意思，相比于直接判断mention和entity的关系，利用mention之间的联系间接link到entity可以充分利用mention context的信息，不过有个明显的问题是两个BERT-based的评价模型如何一致（两者分数可能会有较大差异，无法平衡），无代码）**
+
+**[Zero-shot Medical Entity Retrieval without Annotation: Learning From Rich Knowledge Graph Semantics](https://arxiv.org/abs/2105.12682)** (ACL 2021 short)
+
+文章提出了一个基于medical KG的zero-shot实体提取框架。核心思路是利用KG中涉及的相同实体的同义表达，以及实体间的图形结构，构建双塔结构（Bi-encoder）的对比学习模型，从而对任意未标注的mention获取top-k相关的KG entity。文章用到了ICD-10、SNOMED和UMLS三种medical KG，ICD-10为树结构，parent和child拼接构成entity，SNOMED和UMLS为有向图，涉及多种关系。**（整体思路挺常规，和句子相似匹配、dense passage retrieval相近，无代码）**
+
+**[A Lightweight Neural Model for Biomedical Entity Linking](https://arxiv.org/abs/2012.08844)** (AAAI 2021)
+
+**（[代码](https://github.com/tigerchen52/Biomedical-Entity-Linking)）**
+
 ## Others
 
 **[Counterfactual Supporting Facts Extraction for Explainable Medical Record Based Diagnosis with Graph Network](https://aclanthology.org/2021.naacl-main.156/)** (NAACL 2021)
@@ -115,17 +141,9 @@
 
 文章参照人类记忆的认知过程，构建了Recall、Recognition和Pred三模块的医学关系预测模型。Recall模块学习语料中的entity共现，Recognition模块对给定的head和tail及其相关entity pair（e.g.，i和j），首先学习i和j潜在relation的加权表示，再汇总得到节点和关系的综合表示eij，Pred模块将通过不同相关entity pair的表示进行融合得到最终表示，并通过sigmoid得到head和tail的相关性预测。**（文章亮点一方面在于利用语料库的entity共现补全原有KG的信息，另一方面在于提出了一种可解释性的关系预测框架，可提供待预测关系关联与否的相关关系依据，[代码](https://github.com/zhenwang9102/X-MedRELA)）**
 
-**[Zero-shot Medical Entity Retrieval without Annotation: Learning From Rich Knowledge Graph Semantics](https://arxiv.org/abs/2105.12682)** (ACL 2021 short)
-
-文章提出了一个基于medical KG的zero-shot实体提取框架。核心思路是利用KG中涉及的相同实体的同义表达，以及实体间的图形结构，构建双塔结构（Bi-encoder）的对比学习模型，从而对任意未标注的mention获取top-k相关的KG entity。文章用到了ICD-10、SNOMED和UMLS三种medical KG，ICD-10为树结构，parent和child拼接构成entity，SNOMED和UMLS为有向图，涉及多种关系。**（整体思路挺常规，和句子相似匹配、dense passage retrieval相近，无代码）**
-
 **[Self-Alignment Pretraining for Biomedical Entity Representations](https://arxiv.org/abs/2010.11784)** (NAACL 2021)
 
 文章整体思路同[Zero-shot Medical Entity Retrieval without Annotation: Learning From Rich Knowledge Graph Semantics](https://arxiv.org/abs/2105.12682)，核心是利用对比学习模型，从KG中的相同实体的同义表达中学习该实体的向量表示。其中正负例选择采用online hard pair mining，将较容易正例剔除，loss采用multi-similarity。**（整体思路和我被拒的文章相似，不过这个multi-similarity会有奇效吗？[代码](https://github.com/cambridgeltl/sapbert)）**
-
-[**Clustering-based Inference for Biomedical Entity Linking**](https://aclanthology.org/2021.naacl-main.205/) (NAACL 2021) ★
-
-文章提出了一种基于clustering的entity linking推理机制。首先用两个BERT模型分别构建mention-mention和mention-entity的评价模型，之后通过single-linkage层次聚类算法将最相关的mention-mention或mention-entity进行连接，并且每个cluster只能包含一个entity。**（文章的想法挺有意思，相比于直接判断mention和entity的关系，利用mention之间的联系间接link到entity可以充分利用mention context的信息，不过有个明显的问题是两个BERT-based的评价模型如何一致（两者分数可能会有较大差异，无法平衡），无代码）**
 
 **[FedED: Federated Learning via Ensemble Distillation for Medical Relation Extraction](https://aclanthology.org/2020.emnlp-main.165/)** (EMNLP 2020)
 
@@ -144,4 +162,8 @@
 **（[代码](https://github.com/Cartus/Latent-Forests)）**
 
 ## Unclassified
+
+**[Improving biomedical named entity recognition with syntactic information](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-020-03834-6)** (BMC Bioinformatics 2020)
+
+文章用key-value memory networks融合**句法信息（NP，VP...）**从而提升生物NER的精度，其中句法信息通过offline的工具包得到。
 
