@@ -129,7 +129,7 @@
 
 **[A Lightweight Neural Model for Biomedical Entity Linking](https://arxiv.org/abs/2012.08844)** (AAAI 2021)
 
-**（[代码](https://github.com/tigerchen52/Biomedical-Entity-Linking)）**
+文章提出了一个轻量型的模型解决entity linking问题，初衷是一方面利用context信息提高linking的效果（mention的相似变体太多，不用context不准确），另一方面避免BERT类模型巨大的计算开销。模型亮点是构建了token-level的mention和entity的相似矩阵从而计算attention，以及各自的attention融合表示，并作为额外的特征补充到原有的表示中，作者称之为alignment layer。**（[代码](https://github.com/tigerchen52/Biomedical-Entity-Linking)）**
 
 ## Others
 
