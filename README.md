@@ -179,6 +179,10 @@
 
 文章介绍了几种Graph embedding生成方式。**（[代码](https://github.com/xiangyue9607/BioNEV)）**
 
+**[Leveraging graph-based hierarchical medical entity embedding for healthcare applications](https://www.nature.com/articles/s41598-021-85255-w)** (Scientific Reports 2021)
+
+文章试图解决EHR中entity表示学习存在的问题，包括医学实体的**异质性**（diagnoses、prescriptions、lab test results、medical procedures、doctor profiles和patient demographics），以及单病患诊疗记录上的时间特征。模型用的是GAT，方法本身亮点不多。**（[代码](https://github.com/tong-wu-umn/ME2Vec)）**
+
 ## CV related
 
 部分学者探索了由图像生成医学报告和医学诊断，以及多模态生成医学诊断，这里不作涉及。
