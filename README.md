@@ -115,7 +115,7 @@
 
 **[MTAAL: Multi-Task Adversarial Active Learning for Medical Named Entity Recognition and Normalization](https://ojs.aaai.org/index.php/AAAI/article/view/17714)** (AAAI 2021)
 
-文章主要目的是解决医疗数据标注少的问题，希望用active learning，但现有active learning模型未能将**不同任务的task-specific features**和**样本多样性**考虑进来的问题。
+文章主要目的是解决医疗数据标注少的问题，希望用active learning，但现有active learning模型未能将**不同任务的task-specific features**和**样本多样性**考虑进来。
 
 ## Entity Linking
 
@@ -165,5 +165,5 @@
 
 **[Improving biomedical named entity recognition with syntactic information](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-020-03834-6)** (BMC Bioinformatics 2020)
 
-文章用key-value memory networks融合**句法信息（NP，VP...）**从而提升生物NER的精度，其中句法信息通过offline的工具包得到。
+文章用key-value memory networks融合**句法信息**从而提升生物NER的精度，其中句法信息通过offline的工具包得到。
 
