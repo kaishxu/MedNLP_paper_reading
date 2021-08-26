@@ -55,7 +55,7 @@
 
 **[Pre-training of Graph Augmented Transformers for Medication Recommendation](https://arxiv.org/abs/1906.00346)** (IJCAI 2019)
 
-文章预训练了一个基于EHR（电子病历）数据的BERT模型，其中亮点是将EHR中的medical ontology以Graph的方式进行表示学习。**（[代码](https://github.com/jshang123/G-Bert)）**
+文章预训练了一个基于EHR（电子病历）数据的BERT模型，其中亮点是将EHR中的medical ontology以Graph的方式进行表示学习。Graph模型用的是GAT，表示学习上用到了2-stage结构，先将子节点表示融合到当前节点，再将父节点表示融合到当前节点。**（相比SOTA参数量更小，且效果略好，[代码](https://github.com/jshang123/G-Bert)）**
 
 ## Dialogue
 
