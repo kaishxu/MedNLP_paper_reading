@@ -170,3 +170,8 @@
 **[Med-BERT: pretrained contextualized embeddings on large-scale structured electronic health records for disease prediction](https://www.nature.com/articles/s41746-021-00455-y)** (npj Digital Medicine 2021)
 
 文章预训练了一个基于EHR（电子病历）数据的BERT模型，预训练任务除了MLM，还有住院时长预测。**（该电子病历数据包括诊断时间、诊断代码、具体病情等，某种程度上更像是slot或者信息对，不存在完整长段文本，[代码](https://github.com/ZhiGroup/Med-BERT)）**
+
+## CV related
+
+部分学者探索了由图像生成医学报告和医学诊断，以及多模态生成医学诊断，这里不作涉及。
+
