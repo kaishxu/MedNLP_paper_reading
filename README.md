@@ -53,6 +53,10 @@
 
 文章构建了一个医学知识增强的预训练模型，其通过引入UMLS语义类型（e.g.，心脏的语义类型为身体部位、器官）增强原有BERT对医学知识的表示，另外修改了softmax形式的loss为二元多标签loss。**（思路很常规，实验效果一般，[代码](https://github.com/gmichalo/UmlsBERT)）**
 
+**[Pre-training of Graph Augmented Transformers for Medication Recommendation](https://arxiv.org/abs/1906.00346)** (IJCAI 2019)
+
+文章预训练了一个基于EHR（电子病历）数据的BERT模型，其中亮点是将EHR中的medical ontology以Graph的方式进行表示学习。**（[代码](https://github.com/jshang123/G-Bert)）**
+
 ## Dialogue
 
 **[End-to-End Knowledge-Routed Relational Dialogue System for Automatic Diagnosis](https://arxiv.org/abs/1901.10623)** (AAAI 2019)
@@ -165,11 +169,15 @@
 
 **[Improving biomedical named entity recognition with syntactic information](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-020-03834-6)** (BMC Bioinformatics 2020)
 
-文章用key-value memory networks融合**句法信息**从而提升生物NER的精度，其中句法信息通过offline的工具包得到。
+文章用key-value memory networks融合**句法信息**从而提升生物NER的精度，其中句法信息通过offline的工具包得到。**（[代码](https://github.com/cuhk-nlp/BioKMNER)）**
 
 **[Med-BERT: pretrained contextualized embeddings on large-scale structured electronic health records for disease prediction](https://www.nature.com/articles/s41746-021-00455-y)** (npj Digital Medicine 2021)
 
 文章预训练了一个基于EHR（电子病历）数据的BERT模型，预训练任务除了MLM，还有住院时长预测。**（该电子病历数据包括诊断时间、诊断代码、具体病情等，某种程度上更像是slot或者信息对，不存在完整长段文本，[代码](https://github.com/ZhiGroup/Med-BERT)）**
+
+**[Graph embedding on biomedical networks: methods, applications and evaluations](https://academic.oup.com/bioinformatics/article/36/4/1241/5581350)** (Bioinformatics 2020)
+
+文章介绍了几种Graph embedding生成方式。**（[代码](https://github.com/xiangyue9607/BioNEV)）**
 
 ## CV related
 
