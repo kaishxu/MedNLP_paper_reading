@@ -57,7 +57,7 @@
 
 文章预训练了一个基于EHR（电子病历）数据的BERT模型，其中亮点是将EHR中的medical ontology以Graph的方式进行表示学习。Graph模型用的是GAT，表示学习上用到了2-stage结构，先将子节点表示融合到当前节点，再将父节点表示融合到当前节点。**（相比SOTA参数量更小，且效果略好，[代码](https://github.com/jshang123/G-Bert)）**
 
-**[Knowledge-Guided Efficient Representation Learning for Biomedical Domain](https://dl.acm.org/doi/abs/10.1145/3447548.3467118)** (KDD 2021)
+**[Knowledge-Guided Efficient Representation Learning for Biomedical Domain](https://dl.acm.org/doi/abs/10.1145/3447548.3467118)** (KDD 2021 Applied Data Science Track)
 
 **（无代码）**
 
@@ -143,7 +143,7 @@
 
 **（无代码）**
 
-**[Medical Entity Relation Verification with Large-scale Machine Reading Comprehension](https://dl.acm.org/doi/abs/10.1145/3447548.3467144)** (KDD 2021)
+**[Medical Entity Relation Verification with Large-scale Machine Reading Comprehension](https://dl.acm.org/doi/abs/10.1145/3447548.3467144)** (KDD 2021 Applied Data Science Track)
 
 **（无代码）**
 
