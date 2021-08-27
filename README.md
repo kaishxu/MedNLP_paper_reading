@@ -57,6 +57,10 @@
 
 文章预训练了一个基于EHR（电子病历）数据的BERT模型，其中亮点是将EHR中的medical ontology以Graph的方式进行表示学习。Graph模型用的是GAT，表示学习上用到了2-stage结构，先将子节点表示融合到当前节点，再将父节点表示融合到当前节点。**（相比SOTA参数量更小，且效果略好，[代码](https://github.com/jshang123/G-Bert)）**
 
+**[Knowledge-Guided Efficient Representation Learning for Biomedical Domain](https://dl.acm.org/doi/abs/10.1145/3447548.3467118)** (KDD 2021)
+
+**（无代码）**
+
 ## Dialogue
 
 **[End-to-End Knowledge-Routed Relational Dialogue System for Automatic Diagnosis](https://arxiv.org/abs/1901.10623)** (AAAI 2019)
@@ -134,6 +138,14 @@
 **[A Lightweight Neural Model for Biomedical Entity Linking](https://arxiv.org/abs/2012.08844)** (AAAI 2021)
 
 文章提出了一个轻量型的模型解决entity linking问题，初衷是一方面利用context信息提高linking的效果（mention的相似变体太多，不用context不准确），另一方面避免BERT类模型巨大的计算开销。模型亮点是构建了token-level的mention和entity的相似矩阵从而计算attention，以及各自的attention融合表示，并作为额外的特征补充到原有的表示中，作者称之为alignment layer。**（结果并不是特别漂亮，[代码](https://github.com/tigerchen52/Biomedical-Entity-Linking)）**
+
+**[MEDTO: Medical Data to Ontology Matching Using Hybrid Graph Neural Networks](https://dl.acm.org/doi/abs/10.1145/3447548.3467138)** (KDD 2021)
+
+**（无代码）**
+
+**[Medical Entity Relation Verification with Large-scale Machine Reading Comprehension](https://dl.acm.org/doi/abs/10.1145/3447548.3467144)** (KDD 2021)
+
+**（无代码）**
 
 ## Others
 
