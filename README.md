@@ -143,7 +143,7 @@
 
 **（无代码）**
 
-**[Medical Entity Relation Verification with Large-scale Machine Reading Comprehension](https://dl.acm.org/doi/abs/10.1145/3447548.3467144)** (KDD 2021 Applied Data Science Track)
+**[Medical Entity Relation Verification with Large-scale Machine Reading Comprehension](https://dl.acm.org/doi/abs/10.1145/3447548.3467144)** (KDD 2021)
 
 **（无代码）**
 
