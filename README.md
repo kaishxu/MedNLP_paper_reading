@@ -59,7 +59,7 @@
 
 **[Knowledge-Guided Efficient Representation Learning for Biomedical Domain](https://dl.acm.org/doi/abs/10.1145/3447548.3467118)** (KDD 2021 Applied Data Science Track)
 
-**（无代码）**
+文章核心是提出了基于continual learning的医学实体表示训练框架，从而提升训练效率。**（无代码）**
 
 ## Dialogue
 
