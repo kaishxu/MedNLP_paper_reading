@@ -141,11 +141,11 @@
 
 **[MEDTO: Medical Data to Ontology Matching Using Hybrid Graph Neural Networks](https://dl.acm.org/doi/abs/10.1145/3447548.3467138)** (KDD 2021)
 
-**（无代码）**
+文章提出了一个基于hyperbolic GCN的data（mention）到ontology匹配模型。**（无代码）**
 
-**[Medical Entity Relation Verification with Large-scale Machine Reading Comprehension](https://dl.acm.org/doi/abs/10.1145/3447548.3467144)** (KDD 2021)
+**[Medical Entity Relation Verification with Large-scale Machine Reading Comprehension](https://dl.acm.org/doi/abs/10.1145/3447548.3467144)** (KDD 2021 Applied Data Science Track)
 
-**（无代码）**
+文章构建了一个医学实体关系验证的框架，整体结构上为3-stage pipeline，首先是对任意关系对，用BM25获取evidence，其次是用已有医学语料构建同义句子选择模型从而进一步筛选已获取的evidence，最后是两层attention，一层获取evidence间的attention，另一层获取Graph邻居的attention。**（无代码）**
 
 ## Others
 
