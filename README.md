@@ -81,7 +81,7 @@
 
 **[Semi-Supervised Variational Reasoning for Medical Dialogue Generation](https://arxiv.org/abs/2105.06071)** (SIGIR 2021) ★
 
-**（[代码](https://github.com/lddsdu/VRBot)）**
+**（[代码](https://github.com/lddsdu/VRBot)）** 
 
 **[Medical Triage Chatbot Diagnosis Improvement via Multi-relational Hyperbolic Graph Neural Network](https://dl.acm.org/doi/abs/10.1145/3404835.3463095)** (SIGIR 2021 short)
 
