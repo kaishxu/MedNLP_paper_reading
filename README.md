@@ -87,6 +87,10 @@
 
 没看懂，涉及Hyperbolic GCN相关知识。**（无代码）**
 
+**[Heterogeneous graph reasoning for knowledge-grounded medical dialogue system](https://www.sciencedirect.com/science/article/pii/S0925231221002678)** (Neurocomputing 2021)
+
+文章提出了基于异质图推理的医疗对话生成模型，其中异质图包括entity-entity关联、entity-utterance关联和utter-utterance关联。**（graph学习上和[Graph-Evolving Meta-Learning for Low-Resource Medical Dialogue Generation](https://arxiv.org/abs/2012.11988)非常类似，无代码）**
+
 ## Summarization
 
 [**Attend to Medical Ontologies: Content Selection for Clinical Abstractive Summarization**](https://arxiv.org/abs/2005.00163) (ACL 2020)
