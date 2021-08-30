@@ -101,6 +101,10 @@
 
 文章额外增加了一个taging任务，将对话中每个turn的作用区分为**问题描述**、**诊断治疗**和**其他**。方法上用到了memory network。**（没说明decoder细节，没说明如何训练，[代码](https://github.com/cuhksz-nlp/HET-MC)）**
 
+**[Summarizing Chinese Medical Answer with Graph Convolution Networks and Question-focused Dual Attention](https://aclanthology.org/2020.findings-emnlp.2/)** (EMNLP 2020 Findings)
+
+**（无代码）**
+
 ## Reading Comprehension
 
 **[Knowledge-Empowered Representation Learning for Chinese Medical Reading Comprehension: Task, Model and Resources](https://aclanthology.org/2021.findings-acl.197.pdf)** (ACL Findings 2021)
