@@ -103,7 +103,7 @@
 
 **[Summarizing Chinese Medical Answer with Graph Convolution Networks and Question-focused Dual Attention](https://aclanthology.org/2020.findings-emnlp.2/)** (EMNLP 2020 Findings)
 
-文章提出了一个GCN+Dual Attention的模型用于提取医疗回答的摘要。**（方法上比较常规，无代码）**
+文章提出了一个GCN+Dual Attention的模型用于提取医疗回答的摘要。流程上主要涉及passage中的entity提取（用NER），graph构建，以及用GCN学习graph关系，最后用LSTM生成摘要。**（方法上比较常规，无代码）**
 
 ## Reading Comprehension
 
